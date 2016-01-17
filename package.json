@@ -1,0 +1,24 @@
+{
+  "name": "deact",
+  "version": "0.0.0",
+  "description": "react-like DOM element template engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "dom",
+    "template"
+  ],
+  "author": "Moshe Kolodny",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolodny/deact.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kolodny/deact/issues"
+  },
+  "homepage": "https://github.com/kolodny/deact#readme"
+}
