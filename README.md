@@ -10,12 +10,14 @@ const sayHi = () => console.log('hi');
 
 const domElement = deact`
   <div>
-  	<span onClick=${ function() {console.log('clicked!') }}>span1</span>
-  	<span OncLiCK=${ sayHi }}>span1</span>
+    <span onClick=${ () => console.log('clicked!') }>span1</span>
+    <span OncLiCK=${ sayHi }>span2</span>
   </div>
 `;
 
 ```
+
+#### [DEMO (may need reloading with devtools open)](http://kolodny.github.io/quick-gist/#https://gist.githubusercontent.com/kolodny/689484049e3f19718db1/raw/314d9060e9c06006dee5eebb53819617425a99a7/index.js) [source](https://gist.githubusercontent.com/kolodny/689484049e3f19718db1/raw/314d9060e9c06006dee5eebb53819617425a99a7/index.js)
 
 ## How it works
 
