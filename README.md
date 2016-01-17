@@ -24,3 +24,10 @@ The source is under 50 lines of code. The basic idea behind this is to take
 and if the value is a function and it looks like an attribute then drop
 a placeholder. After doing that for all the items, inject the result into
 a div and replace each placeholder with it's corresponding real value
+
+Note: since the template string must go through the browser's DOM engine,
+attributes are case insensitive 
+
+```js
+onClick === ONCLICK === oNcLiCk
+```
