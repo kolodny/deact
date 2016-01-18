@@ -1,6 +1,8 @@
 module.exports = deact;
 
 var forEach = Array.prototype.forEach
+var events;
+var div;
 
 function deact(template) {
 
@@ -16,14 +18,23 @@ function deact(template) {
     return templateItem + insertItem;
   }).join('') + template[template.length - 1];
 
-  var div = document.createElement('div');
+  if (!div) div = document.createElement('div');
+  if (!events) {
+    events = {};
+    for (var key in div) if (/^on/.test(key)) events[key] = true;
+  }
   div.innerHTML = innerHTML;
 
   forEach.call(div.querySelectorAll('[x-deact-x]'), function(element) {
     forEach.call(element.attributes, function(attribute) {
       var matches = regex.exec(element.getAttribute(attribute.name));
       if (matches) {
-        element[attribute.name] = args[+matches[1] + 1];
+        element.removeAttribute(attribute.name);
+        if (events[attribute.name]) {
+          element.addEventListener(attribute.name.slice(2), args[+matches[1] + 1]);
+        } else {
+          element[attribute.name] = args[+matches[1] + 1];
+        }
       }
     });
   });
