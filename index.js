@@ -15,7 +15,7 @@ function deact(template) {
     if (typeof insertItem === 'function' && templateItem.slice(-1) === '=') {
       insertItem = '"' + replaceholder + '-' + index + '" x-deact-x';
     }
-    return templateItem + insertItem;
+    return templateItem + (insertItem || '');
   }).join('') + template[template.length - 1];
 
   if (!div) div = document.createElement('div');
