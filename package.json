@@ -1,26 +1,14 @@
 {
   "name": "deact",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "react-like DOM element template engine",
   "main": "index.js",
   "scripts": {
-    "test": "mochify --R spec --wd",
+    "test": "mochify --transform babelify --R spec --wd",
     "debug-tests": "mochify --R spec --consolify output.html && open output.html",
     "test-node": "mocha",
     "test-cov": "nyc npm run test-node",
     "test-travis": "npm test && nyc npm run test-node && nyc report --reporter=text-lcov | coveralls"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ]
-        }
-      ]
-    ]
   },
   "browser": {
     "jsdom": false
