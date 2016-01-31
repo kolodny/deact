@@ -1,0 +1,25 @@
+{
+  "sauceLabs": true,
+  "timeout": 20000,
+  "browsers" : [
+    {
+      "name": "internet explorer",
+      "version": "9",
+      "url": "http://kolodny.github.io/doctype.html"
+    },
+    {
+      "name": "internet explorer",
+      "version": "10"
+    },
+    {
+      "name": "internet explorer",
+      "version": "11"
+    },
+    {
+      "name": "chrome"
+    },
+    {
+      "name": "firefox"
+    }
+  ]
+}
