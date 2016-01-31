@@ -8,7 +8,7 @@
     "debug-tests": "mochify --R spec --consolify output.html && open output.html",
     "test-node": "mocha",
     "test-cov": "nyc npm run test-node",
-    "test-travis": "npm test && nyc npm run test-node && nyc report --reporter=text-lcov"
+    "test-travis": "npm test && nyc npm run test-node && nyc report --reporter=text-lcov | coveralls"
   },
   "browserify": {
     "transform": [
