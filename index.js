@@ -84,4 +84,4 @@ deact.escape = function(text) {
   return String(text).replace(/[&<>"'\/]/g, function (s) {
     return entityMap[s];
   });
-}
+};
