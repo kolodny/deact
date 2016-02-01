@@ -1,5 +1,6 @@
 {
   "sauceLabs": true,
+  "BUILD_VAR": "TRAVIS_BUILD_NUMBER",
   "timeout": 20000,
   "browsers" : [
     {
