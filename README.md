@@ -62,5 +62,5 @@ onClick === ONCLICK === oNcLiCk
 [downloads-image]: http://img.shields.io/npm/dm/deact.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/deact
 
-[sauce-image]: https://saucelabs.com/buildstatus/kolodny-deact
+[sauce-image]: https://saucelabs.com/browser-matrix/kolodny-deact.svg
 [sauce-url]: https://saucelabs.com/u/kolodny-deact
