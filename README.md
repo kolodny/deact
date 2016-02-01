@@ -21,7 +21,7 @@ const todos = [ 'make todos list', 'something else?' ];
 
 const domElement = deact`
   <div>
-  <h1>Hello ${firstName} ${lastName}</h1>
+    <h1>Hello ${firstName} ${lastName}</h1>
     <span onClick=${ () => console.log('clicked!') }>span1</span>
     <span OncLiCK=${ sayHi }>span2</span>
     <ul>
